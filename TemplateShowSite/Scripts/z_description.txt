@@ -1,0 +1,6 @@
+jquery-1.11.2.min.js
+	jquery最新版本
+jquery.extend.js
+	jquery拓展库
+jquery.slimscroll.min.js
+	jquery滚动插件

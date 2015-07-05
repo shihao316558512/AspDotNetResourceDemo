@@ -1,0 +1,128 @@
+﻿/*main.master*/
+.navbar-toggle[class*=pull-left]
+{
+    margin-left: 15px;
+}
+.sidebar
+{
+    position: fixed;
+    top: 50px;
+    width: 220px;
+    height: 100%;
+}
+.maincontent
+{
+    position: fixed;
+    top: 50px;
+    height: 100%;
+    background-color: Orange;
+}
+.sidebar, .maincontent
+{
+    -webkit-transition: all .25s ease-out;
+    -o-transition: all .25s ease-out;
+    transition: all .25s ease-out;
+}
+/*>767*/
+.sidebar
+{
+    left: 0px !important;
+}
+.maincontent
+{
+    left: 220px !important;
+}
+.sidebar[class*=active]
+{
+    left: -220px !important;
+}
+.maincontent[class*=active]
+{
+    left: 0px !important;
+}
+/*<=767*/
+@media screen and (max-width: 767px)
+{
+    .sidebar
+    {
+        left: -220px !important;
+    }
+    .maincontent
+    {
+        left: 0px !important;
+        right: 0px !important;
+    }
+    .sidebar[class*=active]
+    {
+        left: 0px !important;
+    }
+    .maincontent[class*=active]
+    {
+        left: 220px !important;
+        right: -220px !important;
+    }
+}
+.sidebar li
+{
+    border-top: 1px solid #f3f3f3;
+}
+.sidebar li a
+{
+    color: #6d7983;
+}
+.sidebar li a:focus
+{
+    background-color: #fff;
+}
+.sidebar li .caret
+{
+    margin-top: 9px;
+}
+.sidebar li i
+{
+    margin-right: 15px;
+}
+.sidebar .nav-header
+{
+    padding: 10px;
+    background-color: #f5f5f5;
+}
+.sidebar .nav > li[class*=active] > a
+{
+    background-color: #00acac;
+    color: #fff;
+}
+.sub-menu
+{
+    display: none;
+}
+.sub-menu li:hover
+{
+    background-color: #f5f5f5;
+}
+.sub-menu li a
+{
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+.sub-menu li[class*=active] > a
+{
+    color: #00acac !important;
+}
+.divscrolltotop
+{
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    background-color: #aaa;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: none;
+}
+.divscrolltotop i
+{
+    padding: 12px;
+    font-size: 24px;
+}
